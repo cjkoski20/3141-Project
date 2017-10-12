@@ -47,6 +47,7 @@
                   </BorderPane>
                </content>
           </Tab>
+		  <!--This will be the tab that has the view for seeing the graph and information that will be on that page-->
           <Tab text="Graph View">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
