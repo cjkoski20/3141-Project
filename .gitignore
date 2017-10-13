@@ -5,6 +5,7 @@
 
 # Personal Files
 .DS_Store
+.idea
 
 # Log file
 *.log
