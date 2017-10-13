@@ -12,7 +12,12 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+				<!--Create a new budget-->
+              <MenuItem mnemonicParsing="false" text="New" />
+				<!--Open exiting budget file-->
+                  <MenuItem mnemonicParsing="false" text="Open" />
+				  <!--Save the current budget-->
+                  <MenuItem mnemonicParsing="false" text="Save" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -32,7 +37,7 @@
       <TabPane prefHeight="200.0" prefWidth="200.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
 			<!--This is the "main" view. It will have the add button so people can add their perchases-->
-          <Tab text="Tab 1">
+          <Tab text="Main View">
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <top>
@@ -44,14 +49,27 @@
                           </items>
                         </MenuButton>
                      </top>
+                     <bottom>
+						<!--Button to bring up the adding data prompty-->
+                        <Button mnemonicParsing="false" text="+" BorderPane.alignment="BOTTOM_RIGHT" />
+                     </bottom>
                   </BorderPane>
                </content>
           </Tab>
 		  <!--This will be the tab that has the view for seeing the graph and information that will be on that page-->
           <Tab text="Graph View">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <MenuButton mnemonicParsing="false" text="MenuButton" BorderPane.alignment="TOP_LEFT">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </MenuButton>
+                     </top>
+                  </BorderPane>
+               </content>
           </Tab>
         </tabs>
       </TabPane>
