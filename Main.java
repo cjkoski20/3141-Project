@@ -6,8 +6,8 @@ public class Main {
 		ArrayList<Month> months = new ArrayList<Month>();
 		Month month = new Month();
 		month.setMonthName("October");
-		month.setIncome(3000, 200);
-		month.setSavings(300, 0, 50);
+		month.setIncome(4000, 200);
+		month.setSavings(150, 0, 50);
 		month.setExpenses(2400, 600, 1200, 1200, 450, 200, 100, 200, 250, 150);
 		months.add(0, month);
 		

@@ -5,7 +5,7 @@ import java.math.RoundingMode;
 
 /**
  * Created by Ryan Philipps on 10/13/17.
- * Date Last Modified: 10/16/17 by Cody Koski
+ * Date Last Modified: 10/30/17 by Cody Koski
  * The class representation of a 'bill', or 'payment' within the system
  */
 public class Payment {
@@ -116,6 +116,10 @@ public class Payment {
 		return monthly_salary;
 	}
 	
+	/**
+	 * Sets the monthly salary as a double value
+	 * @param ms - a double value representing inputed monthly salary
+	 */
 	public void setMonthlySalary(double ms) {
 		monthly_salary = ms;
 	}
@@ -127,6 +131,11 @@ public class Payment {
 		return monthly_other;
 	}
 	
+	/**
+	 * Sets the monthly other as a double value
+	 * @param mo - a double value representing inputed monthly other income
+	 * such as child support, monthly gifts, etc.
+	 */
 	public void setMonthlyOther(double mo) {
 		monthly_other = mo;
 	}
@@ -138,12 +147,21 @@ public class Payment {
 		return emergency_fund;
 	}
 	
+	/**
+	 * Sets the emergency fund savings
+	 * @param ef - a double value representing the inputed emergency fund savings
+	 * per month
+	 */
 	public void setEmergencyFund(double ef) {
 		emergency_fund = ef;
 	}
 	
+	/**
+	 * @return Returns the percentage out of the total expenses for the emergency fund
+	 * savings per month
+	 */
 	public double getEmergencyFundPercentage() {
-		return new BigDecimal((emergency_fund / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal((emergency_fund / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -153,12 +171,21 @@ public class Payment {
 		return investments;
 	}
 	
+	/**
+	 * Sets the investment savings
+	 * @param i - a double value representing the inputed investment savings
+	 * per month
+	 */
 	public void setInvestments(double i) {
 		investments = i;
 	}
 	
+	/**
+	 * @return Returns the percentage out of the total expenses for the investment
+	 * savings per month
+	 */
 	public double getInvestmentsPercentage() {
-		return new BigDecimal((investments / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal((investments / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -173,7 +200,7 @@ public class Payment {
 	}
 	
 	public double getRetirementPercentage() {
-		return new BigDecimal((retirement / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal((retirement / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -195,7 +222,7 @@ public class Payment {
 	}
 	
 	public double getMonthlyTuitionPercentage() {
-		return new BigDecimal(((tuition / 12.0) / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal(((tuition / 12.0) / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -217,7 +244,7 @@ public class Payment {
 	}
 	
 	public double getMonthlyInsurancePercentage() {
-		return new BigDecimal(((insurance / 12.0) / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal(((insurance / 12.0) / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -239,7 +266,7 @@ public class Payment {
 	}
 	
 	public double getMonthlyCarPaymentPercentage() {
-		return new BigDecimal(((car_payment / 12.0) / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal(((car_payment / 12.0) / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -261,7 +288,7 @@ public class Payment {
 	}
 	
 	public double getMonthlyTaxPercentage() {
-		return new BigDecimal(((taxes / 12.0) / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal(((taxes / 12.0) / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -276,7 +303,7 @@ public class Payment {
 	}
 	
 	public double getHousingPercentage() {
-		return new BigDecimal((housing / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal((housing / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -291,7 +318,7 @@ public class Payment {
 	}
 	
 	public double getFoodAndGroceriesPercentage() {
-		return new BigDecimal((foodAndGroceries / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal((foodAndGroceries / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -306,7 +333,7 @@ public class Payment {
 	}
 	
 	public double getPersonalCarePercentage() {
-		return new BigDecimal((personal_care / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal((personal_care / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -321,7 +348,7 @@ public class Payment {
 	}
 	
 	public double getEntertainmentPercentage() {
-		return new BigDecimal((entertainment / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal((entertainment / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -336,7 +363,7 @@ public class Payment {
 	}
 	
 	public double getAutoAndTransportPercentage() {
-		return new BigDecimal((autoAndTransport / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal((autoAndTransport / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 	
 	/**
@@ -351,6 +378,6 @@ public class Payment {
 	}
 	
 	public double getBillsAndUtilitiesPercentage() {
-		return new BigDecimal((billsAndUtilities / getTotalExpenses()) * 100).setScale(2, RoundingMode.DOWN).doubleValue();
+		return new BigDecimal((billsAndUtilities / getTotalExpenses()) * 100).setScale(2, RoundingMode.UP).doubleValue();
 	}
 }
